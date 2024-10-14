@@ -1,12 +1,6 @@
--- Setup language servers.
-local lspconfig = require("lspconfig")
-
-local on_attach = function(client)
-  -- require("completion").on_attach(client)
-end
-
 require("flutter-tools").setup({
-  fvm = true,
+  fvm = false,
+  flutter_lookup_cmd = "asdf where flutter",
   lsp = {
     color = { -- show the derived colours for dart variables
       enabled = true, -- whether or not to highlight color variables at all, only supported on flutter >= 2.10
@@ -18,29 +12,3 @@ require("flutter-tools").setup({
     },
   },
 }) -- use defaults
-
-lspconfig.rust_analyzer.setup({
-  on_attach = on_attach,
-  settings = {
-    ["rust-analyzer"] = {
-      imports = {
-        granularity = {
-          group = "module",
-        },
-        prefix = "self",
-      },
-      rustfmt = {
-        overrideCommand = { "leptosfmt", "--stdin", "--rustfmt" },
-      },
-      cargo = {
-        features = "all",
-        buildScripts = {
-          enable = true,
-        },
-      },
-      procMacro = {
-        enable = true,
-      },
-    },
-  },
-})
