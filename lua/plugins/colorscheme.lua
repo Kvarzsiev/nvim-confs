@@ -21,13 +21,10 @@ return {
           mantle = "#211924",
           crust = "#1a1016",
 
-          color4 = "#F4CDE9",
-          color12 = "#F4CDE9",
+          blue = "#bb546a",
 
-          blue = "#F4CDE9",
-
-          teal = "#EF8A82",
-          sapphire = "#FDD7E9",
+          -- teal = "#bb546a",
+          -- sapphire = "#bb546a",
         },
       },
     },
