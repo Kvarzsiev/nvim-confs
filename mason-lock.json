@@ -1,0 +1,7 @@
+{
+  "angular-language-server": "14.2.0",
+  "lua-language-server": "3.13.2",
+  "prettier": "3.4.1",
+  "shfmt": "v3.10.0",
+  "typescript-language-server": "4.3.3"
+}
